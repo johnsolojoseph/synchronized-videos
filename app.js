@@ -8,7 +8,9 @@ const io = require('socket.io')(server);
 const port =  process.env.PORT;
 
 //Serve user static files
-app.use(express.static('public'));
+app.get('/', function(req, res) {
+    res.sendFile('public/index.html', {root: __dirname })
+});
 
 //Socket.io Handler
 io.on('connection', function(socket) {
@@ -29,5 +31,3 @@ io.on('connection', function(socket) {
 
 
 server.listen(port);
-
-app.listen(port);
