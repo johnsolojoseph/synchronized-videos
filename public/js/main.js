@@ -3,7 +3,7 @@ M.AutoInit();
 
 
 
-var socket = io.connect('http://localhost:5000');
+var socket = io.connect();
 
 socket.on('state', function(data) {
   if (data === "play") {
