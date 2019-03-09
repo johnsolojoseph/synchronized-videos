@@ -44,6 +44,18 @@
     <a id="pause" onclick="pauseYTVideo()"><i class="fas fa-pause-circle fa-3x"></i></a>
   </div>
 
+  <br><br><br>
+
+  <div class="row container">
+        <div class="input-field col s9">
+          <input placeholder="https://www.youtube.com/watch?v=pBuZEGYXA6E" id="url" type="text">
+          <label for="url">Youtube URL</label>
+        </div>
+        <div class="input-field col s3">
+          <a class="load btn no-shadows" onclick="loadVideo()">Load Video</a>
+        </div>
+      </div>
+
 
   <!--External JavaScript files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>

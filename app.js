@@ -21,6 +21,10 @@ io.on('connection', function(socket) {
     io.emit('progress', data);
   });
 
+  socket.on('video', function (data) {
+    io.emit('video', data);
+  });
+
 });
 
 

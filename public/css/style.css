@@ -77,6 +77,24 @@ input[type=range]+.thumb {
   background-color: #141414 !important;
 }
 
+.load {
+  background: #010203 !important;
+  color: #515151;
+}
+
 #scrub {
   background-color: #515151 !important;
 }
+
+input, select, textarea{
+    color: #515151;
+}
+/* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: #9e9e9e !important;
+}
+/* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #9e9e9e !important;
+    box-shadow: 0 1px 0 0 #9e9e9e !important;
+  }

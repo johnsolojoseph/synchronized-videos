@@ -19,6 +19,22 @@ socket.on('progress', function(data) {
 
 });
 
+socket.on('video', function(data) {
+  if (data != null) {
+    var video_id = data.split('v=')[1];
+    var ampersandPosition = video_id.indexOf('&');
+    if (ampersandPosition != -1) {
+      video_id = video_id.substring(0, ampersandPosition);
+    }
+    player.cueVideoById(video_id, 0, "default");
+  } else {
+    M.toast({
+      html: 'Error. URL invalid'
+    })
+  }
+
+});
+
 
 
 //Youtube Iframe API
@@ -38,9 +54,9 @@ function onYouTubeIframeAPIReady() {
     width: '640',
     videoId: 'pBuZEGYXA6E',
     playerVars: {
-            controls: 0,
-            disablekb: 1
-        },
+      controls: 0,
+      disablekb: 1
+    },
     events: {
       onReady: initialize
     }
@@ -54,10 +70,14 @@ function initialize() {
   // Clear any old interval.
   clearInterval(time_update_interval);
 
+  // Start interval to update elapsed time display and
+  // the elapsed part of the progress bar every second.
   time_update_interval = setInterval(function() {
     updateTimerDisplay();
     updateProgressBar();
-  }, 1000);
+  }, 1000)
+
+
 };
 
 // This function is called by initialize()
@@ -111,3 +131,11 @@ function pauseYTVideo() {
   updateTimerDisplay();
   updateProgressBar();
 };
+
+//Queue Video
+function loadVideo() {
+  var url = document.getElementById("url").value;
+  socket.emit("video", url);
+  updateTimerDisplay();
+  updateProgressBar();
+}
