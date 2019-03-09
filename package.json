@@ -1,0 +1,16 @@
+{
+  "name": "youtube-socket",
+  "version": "1.0.0",
+  "description": "A server that allows users to simulatenously watch a Youtube Video together",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "socket.io": "^2.2.0"
+  }
+}
