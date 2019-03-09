@@ -1,13 +1,10 @@
-# youtube-socket :computer:
+# youtube-socket :video_camera: :movie_camera:
 
-A simple AngularJS application that leverages socket.io for bi-directional communication
+Leveraging socket.io to allow users to simultaneously control a YouTube video and updates clients in real-time
+
 
 ## Get started
 
 1. Make sure to `npm install`
 2. Then run `npm start`
 3. Navigate to `localhost:5000`
-
-## Guidance
-Make sure to have node installed.<br>
- Open multiple browser windows on localhost:3300 to see multiple clients updated in real-time

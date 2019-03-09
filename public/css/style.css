@@ -13,3 +13,12 @@ body {
 #player {
   margin-top: 50px;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.play {
+  padding-right: 20px;
+}
