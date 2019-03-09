@@ -29,3 +29,5 @@ io.on('connection', function(socket) {
 
 
 server.listen(port);
+
+app.listen(port);
