@@ -23,20 +23,31 @@
   </nav>
 
   <!--Youtube Video -->
-  <div class="center" id="player">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/pBuZEGYXA6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="player-container center">
+    <div id="player"></div>
   </div>
+
 
   <br>
 
-  <div class="center">
-    <a class="play"><i class="fas fa-play-circle fa-3x"></i></a>
-    <a class="pause"><i class="fas fa-pause-circle fa-3x"></i></a>
+  <div class="center container">
+    <p class="container range-field">
+      <input type="range" id="scrub" min="0" max="100" value="0" />
+      <br>
+    </p>
+    <div class="time-display">
+      <span id="current-time"></span>/<span id="duration"></span>
+    </div>
+
+    <br>
+    <a id="play" onclick="playYTVideo()"><i class="fas fa-play-circle fa-3x"></i></a>
+    <a id="pause" onclick="pauseYTVideo()"><i class="fas fa-pause-circle fa-3x"></i></a>
   </div>
 
 
   <!--External JavaScript files -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/main.js"></script>

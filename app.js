@@ -13,8 +13,12 @@ app.use(express.static('public'));
 //Socket.io Handler
 io.on('connection', function(socket) {
 
-  socket.on('message', function (data) {
-    io.emit('message', {msg: data});
+  socket.on('state', function (data) {
+    io.emit('state', data);
+  });
+
+  socket.on('progress', function (data) {
+    io.emit('progress', data);
   });
 
 });

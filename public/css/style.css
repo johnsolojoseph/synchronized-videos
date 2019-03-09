@@ -1,6 +1,7 @@
 body {
   background: #0a1116;
 }
+
 .color-primary {
   background-color: #2a2a2a !important;
   color: white !important;
@@ -10,8 +11,8 @@ body {
   box-shadow: none !important;
 }
 
-#player {
-  margin-top: 50px;
+.player-container {
+  margin-top: 30px;
 }
 
 a {
@@ -19,6 +20,63 @@ a {
   color: inherit;
 }
 
-.play {
+#play {
   padding-right: 20px;
+}
+
+.range-field {
+  width: 640px;
+}
+
+.time-display {
+  margin-left: 580px;
+  color: #515151;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 510%;
+  background: #141414;
+  border: 2px solid #515151;
+  margin-top: -5px;
+  cursor: pointer
+}
+input[type=range]::-ms-fill-lower {
+  background: #141414 !important;
+  background-color: : #141414 !important;
+}
+
+input[type=range] {
+  border: 2px #515151 !important;
+  background: transparent;
+  border-top-color: #515151 !important;
+  border-right-color: #515151 !important;
+  border-bottom-color: #515151 !important;
+  border-left-color: #515151 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: transparent !important;
+}
+
+input[type=range]::-moz-range-track {
+  background: #515151 !important;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #515151 !important;
+}
+
+input[type=range]+.thumb {
+  background-color: #141414 !important;
+}
+
+#scrub {
+  background-color: #515151 !important;
 }
