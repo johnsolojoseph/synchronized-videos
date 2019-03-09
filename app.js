@@ -8,9 +8,7 @@ const io = require('socket.io')(server);
 const port =  process.env.PORT;
 
 //Serve user static files
-app.get('/', function(req, res) {
-    res.sendFile('public/index.html', {root: __dirname })
-});
+app.use(express.static(__dirname + '/public/'));
 
 //Socket.io Handler
 io.on('connection', function(socket) {
