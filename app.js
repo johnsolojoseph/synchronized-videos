@@ -5,7 +5,7 @@ const io = require('socket.io')(server);
 
 
 //Port for localhost or production
-const port =  5000 || process.env.PORT;
+const port =  process.env.PORT || 5000;
 
 //Serve user static files
 app.use(express.static(__dirname + '/public/'));
